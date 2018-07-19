@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+    <head>
+		<title>Horoscope App </title>
+		<!--link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"-->
+	</head> 
+
+    <body>
+    	<header>
+    		<div class="container">
+        		<h1 class="logo">Horoscope  App </h1>
+        		<strong><nav>
+          		<ul class="menu">
+            		<li><a href="{{url_for('home')}}">Home</a></li>
+          		</ul>
+        		</nav></strong>
+      		</div>
+    	</header>
+
+    	<div class="horoscope">
+        <p>This example uses external Rest API to find get your horoscope</p>
+
+		<h1 class="logo">To find your horoscope enter your date of birth</h1>
+		<div id="contact-form" >
+			<form method="post" action="/myhoroscope">
+				<label for="text">Please Enter Your DOB:</label>
+				<input type="Date" id="dob" name="dob" required="required" data-date-format="DD MMMM YYYY">
+				<input type="submit" value="Submit" id="submit"/>
+			</form>
+		</div>
+	</div>
+
+    </body> 
+
+</html>
